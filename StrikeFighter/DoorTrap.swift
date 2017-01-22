@@ -14,12 +14,12 @@ class DoorTrap : Trap {
     init() {
         
         
-        let texture = SKTexture(imageNamed: "trapDoor1")
+        let texture = SKTexture(imageNamed: "Satellite")
         super.init(texture: texture, color: .clear, size: texture.size())
         var textures = [SKTexture]()
-        for i in 1...4 {
-            textures.append(SKTexture(imageNamed: "trapDoor\(i)"))
-        }
+     
+        textures.append(SKTexture(imageNamed: "Satellite"))
+        
         zPosition = 1
         physicsBody = SKPhysicsBody(circleOfRadius: 20)
         physicsBody!.categoryBitMask = PhysicsCategory.Trap

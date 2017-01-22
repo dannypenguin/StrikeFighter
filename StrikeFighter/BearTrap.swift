@@ -15,13 +15,13 @@ class BearTrap : Trap {
     init() {
         
         
-        let texture = SKTexture(imageNamed: "bearTrap2")
+        let texture = SKTexture(imageNamed: "bullet")
         super.init(texture: texture, color: .clear, size: texture.size())
         
         var textures = [SKTexture]()
-        for i in 1...2 {
-            textures.append(SKTexture(imageNamed: "bearTrap\(i)"))
-        }
+        
+        textures.append(SKTexture(imageNamed: "bullet"))
+        
         
         physicsBody = SKPhysicsBody(circleOfRadius: 20)
         physicsBody!.categoryBitMask = PhysicsCategory.Trap
